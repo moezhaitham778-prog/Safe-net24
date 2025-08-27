@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Safe Net | اشترك الآن</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <img src="safe-net-logo.png" alt="Safe Net Logo" class="logo">
+      <div class="brand">
+        <h1>اشترك في خدمات Safe Net</h1>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">الرئيسية</a>
+      <a href="plans.html">الباقات</a>
+      <a href="subscribe.html" class="active">اشترك الآن</a>
+      <a href="contact.html">تواصل معنا</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <form id="subscribeForm" onsubmit="return false;">
+        <label>الاسم كامل</label>
+        <input type="text" id="name" placeholder="اكتب اسمك" required>
+
+        <label>اختر الباقة</label>
+        <select id="plan" required>
+          <option value="">-- اختر الباقة --</option>
+          <option value="الباقة الأولى - 10,000 جنيه">الباقة الأولى - 10,000 جنيه</option>
+          <option value="الباقة الثانية - 40,000 جنيه">الباقة الثانية - 40,000 جنيه</option>
+          <option value="الباقة الثالثة - 70,000 جنيه">الباقة الثالثة - 70,000 جنيه</option>
+        </select>
+
+        <label>IP Range (مثال: 192.168.1.0/24)</label>
+        <input type="text" id="ip" placeholder="اكتب الـ IP Range" required>
+
+        <label>رقم الهاتف (اختياري)</label>
+        <input type="tel" id="phone" placeholder="010xxxxxxxx">
+
+        <div class="form-actions">
+          <button class="btn" type="button" onclick="sendToWhatsApp()">اشترك الآن (واتساب)</button>
+          <button class="btn ghost" type="button" onclick="downloadCSV()">تحميل بياناتي كملف CSV</button>
+        </div>
+        <p class="note">بعد الضغط على "اشترك الآن" سيتم تحويلك إلى واتساب لإرسال رسالة الاشتراك تلقائيًا.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year3"></span> Safe Net.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year3').innerText = new Date().getFullYear();</script>
+</body>
+</html>
